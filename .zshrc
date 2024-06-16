@@ -63,5 +63,4 @@ alias clear='clear && catnap'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-clear
 catnap
