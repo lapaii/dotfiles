@@ -56,6 +56,7 @@ alias ls='ls --color'
 alias lsa='ls -a --color'
 alias clear='clear && catnap'
 alias grep='grep --color'
+alias ssh-hetzner='ssh lapaii@65.21.244.54'
 
 # Paths
 export PATH="$HOME/.turso:$PATH"
@@ -65,6 +66,8 @@ export PATH="$HOME/go/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -72,3 +75,11 @@ eval "$(zoxide init --cmd cd zsh)"
 
 catnap
 
+
+# pnpm
+export PNPM_HOME="/home/lapaii/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
