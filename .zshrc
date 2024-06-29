@@ -51,6 +51,11 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
 # Aliases
 alias ls='ls --color'
 alias lsa='ls -a --color'
@@ -73,8 +78,7 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-catnap
-
+clear
 
 # pnpm
 export PNPM_HOME="/home/lapaii/.local/share/pnpm"
@@ -83,3 +87,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export PATH=/home/lapaii/.local/bin:/home/lapaii/.local/share/pnpm:/home/lapaii/.bun/bin:/home/lapaii/go/bin:/home/lapaii/.cargo/bin:/home/lapaii/.turso:/home/lapaii/.local/share/zinit/polaris/bin:/home/lapaii/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+export PATH=/home/lapaii/.local/bin:/home/lapaii/.local/share/pnpm:/home/lapaii/.bun/bin:/home/lapaii/go/bin:/home/lapaii/.cargo/bin:/home/lapaii/.turso:/home/lapaii/.local/share/zinit/polaris/bin:/home/lapaii/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
