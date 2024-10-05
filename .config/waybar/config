@@ -1,0 +1,98 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 39,
+    "spacing": 4,
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "passthrough": false,
+    "fixed-center": true,
+
+    "modules-left": ["sway/workspaces", "custom/sep", "sway/window"],
+    "modules-center": ["custom/music-player"],
+    "modules-right": [ 
+        "custom/sep",
+        "pulseaudio",
+        "clock",
+        "clock#simpleclock",
+        "custom/sep",
+        "tray",
+	"custom/sep",
+	"custom/power",
+    ],
+
+    "custom/music-player": {
+        "interval": 1,
+        "format": "{}",
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/music_player.sh grep",
+        "on-click": "~/.config/waybar/modules/music_player.sh pause",
+        "on-click-middle": "~/.config/waybar/modules/music_player.sh previous",
+        "on-click-right": "~/.config/waybar/modules/music_player.sh next",
+    },
+
+    "wlr/workspaces": {
+        "on-click": "activate",
+        "format": "{name}",
+        "all-outputs": true,
+        "disable-scroll": false,
+        "active-only": false,
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "rewrite": {
+            "(.{72}).*": "$1..",
+        },
+        "icon": true,
+        "icon-size": 22,
+    },
+
+    "tray": {
+        "show-passive-items": true,
+        "spacing": 10,
+    },
+
+    "clock#simpleclock": {
+        "tooltip": false,
+	"interval": 1,
+        "format": "  {:%H:%M:%S}",
+    },
+
+    "clock": {
+    	"tooltip": false,
+        "format": "  {:L%a %d %b}",
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "  muted",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " ", " "],
+        },
+        "on-click-middle": "pamixer -t",
+        "on-click": "pavucontrol",
+    },
+
+    "custom/logo": {
+        "format": "",
+        "tooltip": false,
+    },
+
+    "custom/sep": {
+        "format": "|",
+        "tooltip": false,
+    },
+
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "~/.config/wofi/modules/powermenu/powermenu.sh",
+        "format": "⏻ ",
+    },
+}

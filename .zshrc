@@ -10,6 +10,8 @@ fi
 # Source zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+export GPG_TTY=$(tty)
+
 # Prompt setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/mocha.json)"
 
@@ -61,7 +63,10 @@ alias ls='ls --color'
 alias lsa='ls -a --color'
 alias clear='clear && catnap'
 alias grep='grep --color'
-alias ssh-hetzner='ssh lapaii@65.21.244.54'
+alias code='vscodium'
+alias go='cargo-mommy'
+alias htop='btop'
+alias YAY='yay'
 
 # Paths
 export PATH="$HOME/.turso:$PATH"
@@ -70,22 +75,24 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+export GOPATH=$HOME/Documents/code/go/
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/.local/bin
+
+export CARGO_MOMMYS_ACTUAL="go"
 
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+# bun completions
+[ -s "/home/lapaii/.bun/_bun" ] && source "/home/lapaii/.bun/_bun"
+
 clear
 
-# pnpm
-export PNPM_HOME="/home/lapaii/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-export PATH=/home/lapaii/.local/bin:/home/lapaii/.local/share/pnpm:/home/lapaii/.bun/bin:/home/lapaii/go/bin:/home/lapaii/.cargo/bin:/home/lapaii/.turso:/home/lapaii/.local/share/zinit/polaris/bin:/home/lapaii/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-export PATH=/home/lapaii/.local/bin:/home/lapaii/.local/share/pnpm:/home/lapaii/.bun/bin:/home/lapaii/go/bin:/home/lapaii/.cargo/bin:/home/lapaii/.turso:/home/lapaii/.local/share/zinit/polaris/bin:/home/lapaii/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+# fnm
+FNM_PATH="/home/lapaii/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/lapaii/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi

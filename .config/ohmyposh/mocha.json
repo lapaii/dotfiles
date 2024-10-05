@@ -12,12 +12,6 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "p:os",
-          "style": "plain",
-          "template": "{{.Icon}} ",
-          "type": "os"
-        },
-        {
           "foreground": "p:blue",
           "style": "plain",
           "template": "{{ .UserName }}@{{ .HostName }} ",

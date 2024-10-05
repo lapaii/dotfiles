@@ -1,0 +1,7 @@
+allow_images=true
+insensitive=true
+prompt=Apps
+no_actions=true
+hide_scroll=true
+parse_search=true
+width=40%

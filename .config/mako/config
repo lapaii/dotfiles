@@ -1,0 +1,24 @@
+sort=-time
+
+on-button-right=dismiss
+#on-notify=exec mpv --no-resume-playback --really-quiet /home/lapaii/Music/notification/notification.ogg
+
+default-timeout=10000
+ignore-timeout=0
+
+width=600
+height=200
+
+font=JetBrainsMonoNerdFont Semi-Bold
+
+output=DP-2
+
+# Colors
+
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#74c7ec
+progress-color=over #313244
+
+[urgency=high]
+border-color=#fab387
