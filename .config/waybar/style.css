@@ -60,12 +60,17 @@ window#waybar.hidden {
 #memory,
 #window,
 #custom-screen-recorder,
+#backlight,
 #custom-gpu {
     min-height: 0;
     padding: 2px 10px;
     border-radius: 8px;
     margin: 4px 4px;
     background-color: #181825;
+}
+
+#backlight {
+	color: #94e2d5;
 }
 
 #custom-sep {

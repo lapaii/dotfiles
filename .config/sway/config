@@ -228,6 +228,8 @@ bindsym $mod+r mode "resize"
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    bindsym --locked XF86KbdBrightnessUp exec brightnessctl --device "smc::kbd_backlight" set 5%+
+    bindsym --locked XF86KbdBrightnessDown exec brightnessctl --device "smc::kbd_backlight" set 5%-
     # Special key to take a screenshot with grimc
     bindsym Print exec hyprshot -m region --freeze
     bindsym $mod+Shift+s exec hyprshot -m region --freeze

@@ -12,6 +12,7 @@
     "modules-center": ["custom/music-player"],
     "modules-right": [ 
         "custom/sep",
+	"backlight",
         "pulseaudio",
         "clock",
         "clock#simpleclock",
@@ -64,6 +65,11 @@
         "format": "  {:L%a %d %b}",
     },
 
+    "backlight": {
+    	"format": "{icon} {percent}%",	
+	"format-icons": ["󰌶 ", "󱩎 ", "󱩏 ", "󱩐 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󰌵 "]
+    },
+
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-muted": "  muted",
@@ -75,9 +81,7 @@
             "portable": "",
             "car": "",
             "default": [" ", " ", " "],
-        },
-        "on-click-middle": "pamixer -t",
-        "on-click": "pavucontrol",
+	},
     },
 
     "custom/logo": {
