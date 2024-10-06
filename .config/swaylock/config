@@ -4,8 +4,6 @@ show-failed-attempts
 
 indicator
 
-clock
-timestr=%r
 datestr=%d/%m/%Y
 
 indicator-radius=115
