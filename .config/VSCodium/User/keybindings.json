@@ -1,0 +1,5 @@
+// Place your key bindings in this file to override the defaults
+[
+  { "key": "ctrl+shift+f", "command": "actions.find", "when": "editorFocus || editorIsOpen" },
+  { "key": "ctrl+f", "command": "editor.action.inlineSuggest.commit", "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible" },
+]

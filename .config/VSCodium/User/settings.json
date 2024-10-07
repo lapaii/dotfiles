@@ -1,0 +1,63 @@
+{
+  "editor.fontFamily": "Monaspace Neon SemiBold",
+  "editor.fontSize": 15,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "explorer.confirmDelete": false,
+  "git.openRepositoryInParentFolders": "never",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "catppuccin-mocha",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.lightbulb.enabled": "off",
+  "editor.inlayHints.enabled": "on",
+  "rust-analyzer.check.command": "clippy",
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "editor.minimap.enabled": false,
+  // we try to make semantic highlighting look good
+  "editor.semanticHighlighting.enabled": true,
+  // prevent VSCode from modifying the terminal colors
+  "terminal.integrated.minimumContrastRatio": 1,
+  // make the window's titlebar use the workbench colors
+  "window.titleBarStyle": "custom",
+  // applicable if you use Go, this is an opt-in flag!
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "prettier.printWidth": 156,
+  "catppuccin.accentColor": "sapphire",
+  "editor.inlineSuggest.fontFamily": "Monaspace Krypton SemiBold",
+  "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'",
+  "editor.cursorWidth": 4,
+  "editor.cursorStyle": "line",
+  "emmet.showExpandedAbbreviation": "never",
+  "editor.maxTokenizationLineLength": 50000,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+  "[c]": {
+    "editor.tabSize": 8,
+    "editor.insertSpaces": true,
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "go.toolsManagement.autoUpdate": true,
+  "discord.largeImage": "Editing a {lang} file",
+  "discord.workspaceExcludePatterns": [
+    "fantasy-owc"
+  ],
+  "python.defaultInterpreterPath": "/bin/python",
+}
