@@ -61,6 +61,8 @@ window#waybar.hidden {
 #window,
 #custom-screen-recorder,
 #backlight,
+#temperature,
+#custom-keyboard-light,
 #custom-gpu {
     min-height: 0;
     padding: 2px 10px;
@@ -68,6 +70,25 @@ window#waybar.hidden {
     margin: 4px 4px;
     background-color: #181825;
 }
+
+#custom-keyboard-light {
+	color: #cba6f7;
+}
+
+#temperature {
+	color: #b4befe;
+}
+
+#temperature.critical {
+	animation: critical 1s infinite;	
+}
+
+@keyframes critical {
+	0% { color: #f38ba8 }
+	50% { color: #eba0ac }
+	100% { color: #f38ba8 }
+}
+
 
 #backlight {
 	color: #94e2d5;
@@ -78,33 +99,11 @@ window#waybar.hidden {
     color: #585b70;
 }
 
-#custom-screen-recorder.recording {
-    color: #10ef2c;
-}
-
-#custom-screen-recorder.not-recording {
-    color: #df2020;
-}
-
-#custom-music-player.playing {
-    color: #cdd6f4;
-}
-
-#custom-music-player.paused {
-    color: #9399b2;
-}
-
 window#waybar.empty #window {
     background-color: transparent;
 }
 
 #cpu {
-    color: #94e2d5;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-#custom-gpu {
     color: #94e2d5;
     margin-left: 0;
     margin-right: 0;

@@ -16,6 +16,7 @@ kernel    = {icon = " ", name = "kernel", color = "(MA)"}
 desktop   = {icon = " ", name = "desktop", color = "(CN)"}
 terminal  = {icon = " ", name = "term", color = "(RD)"}
 shell     = {icon = " ", name = "shell", color = "(MA)"}
+disk_0    = {icon = " ", name = "disk", color = "(GN)"}
 packages  = {icon = " ", name = "packages", color = "(GN)"}
 #memory    = {icon = " ", name = "memory", color = "(YW)"}
 

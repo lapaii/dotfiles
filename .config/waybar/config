@@ -8,10 +8,11 @@
     "passthrough": false,
     "fixed-center": true,
 
-    "modules-left": ["sway/workspaces", "custom/sep", "sway/window"],
-    "modules-center": ["custom/music-player"],
+    "modules-left": ["sway/workspaces", "custom/sep", "sway/window"], 
     "modules-right": [ 
         "custom/sep",
+	"temperature",
+	"custom/keyboard-light",
 	"backlight",
         "pulseaudio",
         "clock",
@@ -22,14 +23,17 @@
 	"custom/power",
     ],
 
-    "custom/music-player": {
-        "interval": 1,
-        "format": "{}",
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/music_player.sh grep",
-        "on-click": "~/.config/waybar/modules/music_player.sh pause",
-        "on-click-middle": "~/.config/waybar/modules/music_player.sh previous",
-        "on-click-right": "~/.config/waybar/modules/music_player.sh next",
+    "custom/keyboard-light": {
+    	"interval": 1,
+    	"format": "  {}",
+	"return-type": "json",
+	"exec": "~/.config/waybar/modules/keyboard_light.sh",
+    },
+
+    "temperature": {
+    	"format": " {temperatureC}°C",
+	"format-critical": "  {temperatureC}°C",
+	"critical-threshold": 60,
     },
 
     "wlr/workspaces": {
