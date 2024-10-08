@@ -1,13 +1,10 @@
 {
-  "editor.fontFamily": "Monaspace Neon SemiBold",
+  "editor.fontFamily": "Monaspace Neon Var",
+  "editor.fontWeight": "1000",
   "editor.fontSize": 15,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "files.eol": "\n",
-  "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
-  "svelte.enable-ts-plugin": true,
   "explorer.confirmDelete": false,
   "git.openRepositoryInParentFolders": "never",
   "git.confirmSync": false,
@@ -39,7 +36,7 @@
   },
   "prettier.printWidth": 156,
   "catppuccin.accentColor": "sapphire",
-  "editor.inlineSuggest.fontFamily": "Monaspace Krypton SemiBold",
+  "editor.inlineSuggest.fontFamily": "Monaspace Krypton Var",
   "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'",
   "editor.cursorWidth": 4,
   "editor.cursorStyle": "line",
