@@ -4,7 +4,9 @@ show-failed-attempts
 
 indicator
 
+clock
 datestr=%d/%m/%Y
+timestr=%r
 
 indicator-radius=115
 indicator-thickness=30
