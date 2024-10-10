@@ -24,18 +24,10 @@ set $menu $HOME/.config/wofi/modules/launchers/launcher.sh
 set $powermenu $HOME/.config/wofi/modules/powermenu/powermenu.sh
 set $osu osu-wine
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-# output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-
 output DP-1 resolution 1920x1080@239.964Hz position 1920,0 allow_tearing yes
 output DP-2 resolution 1920x1080@143.855Hz position 0,0 allow_tearing yes
 
-seat * xcursor_theme breeze_cursors 28
+seat * xcursor_theme default 30
 
 workspace 1 output DP-1
 workspace 2 output DP-2
@@ -49,36 +41,6 @@ client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
-
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
 
 input "1133:16505:Logitech_G_Pro" {
 	accel_profile "flat"
@@ -122,10 +84,6 @@ input "0:0:OpenTabletDriver_Virtual_Tablet" {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' c-B 'Yes, exit sway' 'swaymsg exit'
-
-    bindsym $mod+Shift+p exec sway exit
 #
 # Moving around:
 #
@@ -262,7 +220,6 @@ default_floating_border normal 2
 gaps inner 10
 
 exec export QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
-exec export XCURSOR_THEME=breeze_cursors
 exec /usr/lib/opentabletdriver/OpenTabletDriver.Daemon
 exec mako
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
