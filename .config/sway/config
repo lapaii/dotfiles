@@ -24,6 +24,8 @@ set $menu $HOME/.config/wofi/modules/launchers/launcher.sh
 set $powermenu $HOME/.config/wofi/modules/powermenu/powermenu.sh
 set $osu osu-wine
 
+seat * xcursor_theme breeze_cursors 28
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
