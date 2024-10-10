@@ -7,6 +7,7 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 shutdown='󰐥'
 reboot=''
 lock='󰌾'
+suspend='󰒲'
 logoff='󰍃'
 
 # Wofi CMD
@@ -20,7 +21,7 @@ wofi_cmd() {
 
 # Pass variables to wofi dmenu
 run_wofi() {
-	echo -e "$shutdown\n$reboot\n$lock\n$logoff" | wofi_cmd
+	echo -e "$shutdown\n$reboot\n$lock\n$logoff\n$suspend" | wofi_cmd
 }
 
 # Execute Command
@@ -32,7 +33,9 @@ run_cmd() {
 	elif [[ $1 == '--lock' ]]; then
 		swaylock
 	elif [[ $1 == '--logout' ]]; then
-		sway exit	
+		sway exit
+	elif [[ $1 == '--suspend' ]]; then
+		systemctl suspend
 	fi
 }
 
@@ -51,4 +54,7 @@ case ${chosen} in
     $logoff)
 		run_cmd --logout
         ;;
+    $suspend)
+	    	run_cmd --suspend
+	;;
 esac
