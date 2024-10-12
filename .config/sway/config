@@ -248,6 +248,7 @@ for_window {
 	[class="hyp.exe"] $floating
 	[class="zenlesszonezero.exe"] $game
 	[class="cyberpunk2077.exe"] $game
+	[class="osu!"] $game
 }
 
 include @sysconfdir@/sway/config.d/*

@@ -2,8 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     oh-my-posh init fish --config $HOME/.config/ohmyposh/mocha.json | source
 
-    zoxide init --cmd cd fish | source
-
     alias ls='ls --color'
     alias lsa='ls -a --color'
     alias clear='clear && catnap'
@@ -26,6 +24,8 @@ if status is-interactive
     export PATH="$HOME/.local/share/fnm:$PATH"
 
     fnm env | source
+
+    zoxide init fish | source
 
     clear
 end
