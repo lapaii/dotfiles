@@ -61,7 +61,7 @@ input "1452:586:bcm5974" {
 #
 # Example configuration:
 
-exec swayidle -w \
+ exec swayidle -w \
   timeout 300 'swaylock -f' \
   timeout 600 'systemctl suspend' \
   before-sleep 'swaylock -f'

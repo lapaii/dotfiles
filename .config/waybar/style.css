@@ -58,6 +58,7 @@ window#waybar.hidden {
 #cpu,
 #tray,
 #memory,
+#battery,
 #window,
 #custom-screen-recorder,
 #backlight,
@@ -71,7 +72,7 @@ window#waybar.hidden {
     background-color: #181825;
 }
 
-#custom-keyboard-light {
+#backlight {
 	color: #cba6f7;
 }
 
@@ -89,9 +90,36 @@ window#waybar.hidden {
 	100% { color: #f38ba8 }
 }
 
+@keyframes warning {
+	0% { color: #f9e2af }
+	50% { color: #fab387 }
+	100% { color: #f9e2af }
+}
 
-#backlight {
+#battery {
 	color: #94e2d5;
+}
+
+#battery.charging.warning {
+	animation: charging 1s infinite;
+}
+
+#battery.charging.critical {
+	animation: charging 1s infinite;
+}
+
+#battery.discharging.warning {
+	animation: warning 1s infinite;
+}
+
+#battery.discharging.critical {
+	animation: critical 1s infinite;
+}
+
+@keyframes charging {
+	0% { color: #a6e3a1 }
+	50% { color: #94e2d5 }
+	100% { color: #a6e3a1 }
 }
 
 #custom-sep {

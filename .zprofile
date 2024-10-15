@@ -1,6 +1,6 @@
 export GPG_TTY=$(tty)
 
-if [ x"$XDG_CURRENT_DESKTOPc" = x"Sway" ] ; then
-	QT_QPA_PLATFORMTHEME=qt54ct
+if [ "$XDG_CURRENT_DESKTOP" = "Sway" ] ; then
+	QT_QPA_PLATFORMTHEME=qt5ct
 	export QT_QPA_PLATFORMTHEME
 fi

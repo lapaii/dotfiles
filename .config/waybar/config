@@ -11,9 +11,8 @@
     "modules-left": ["sway/workspaces", "custom/sep", "sway/window"], 
     "modules-right": [ 
         "custom/sep",
-	"temperature",
-	"custom/keyboard-light",
 	"backlight",
+	"battery",
         "pulseaudio",
         "clock",
         "clock#simpleclock",
@@ -23,8 +22,24 @@
 	"custom/power",
     ],
 
+    "backlight": {
+    	"tooltip": false
+    },
+
+    "battery": {
+    	"format": "{icon} {capacity}%",
+	"states": {
+		"warning": 20,
+		"critical": 10,
+	},
+	"format-icons": [" ", " ", " ", " ", " "],
+	"interval": 30,
+	"tooltip": true
+    },
+
     "custom/keyboard-light": {
     	"interval": 1,
+	"tooltip": false,
     	"format": "  {}",
 	"return-type": "json",
 	"exec": "~/.config/waybar/modules/keyboard_light.sh",
@@ -34,6 +49,7 @@
     	"format": " {temperatureC}°C",
 	"format-critical": "  {temperatureC}°C",
 	"critical-threshold": 60,
+	"tooltip": false
     },
 
     "wlr/workspaces": {
@@ -86,11 +102,6 @@
             "car": "",
             "default": [" ", " ", " "],
 	},
-    },
-
-    "custom/logo": {
-        "format": "",
-        "tooltip": false,
     },
 
     "custom/sep": {
