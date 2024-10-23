@@ -25,7 +25,7 @@ if status is-interactive
 
     fnm env | source
 
-    zoxide init fish | source
+    zoxide init fish --cmd cd | source
 
     catnap
 end
